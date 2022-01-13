@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "15203684819",
+    "project_id": "gopizza-ead78",
+    "storage_bucket": "gopizza-ead78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15203684819:android:6863c153fd218134051f26",
+        "android_client_info": {
+          "package_name": "com.gopizza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15203684819-2phcl5ce33i7qb0eibag640lf7o2tcc7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD19ev6B37K3fnc2Sd0JKqDJcJTK66RvdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15203684819-2phcl5ce33i7qb0eibag640lf7o2tcc7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
