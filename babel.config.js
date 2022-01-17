@@ -1,8 +1,9 @@
 module.exports = function (api) {
   api.cache(true);
   return {
-    presets: [["babel-preset-expo", { jsxRuntime: "automatic" }]],
+    presets: [["babel-preset-expo"]],
     plugins: [
+      "react-native-reanimated/plugin",
       [
         "module-resolver",
         {
@@ -11,13 +12,7 @@ module.exports = function (api) {
           alias: {
             "@assets": "./src/assets",
             "@components": "./src/components",
-            "@contexts": "./src/contexts",
-            "@pages": "./src/pages",
-            "@routes": "./src/routes",
-            "@services": "./src/services",
-            "@styles": "./src/styles",
-            "@utils": "./src/utils",
-            "@src": "./src",
+            "@screens": "./src/screens",
           },
         },
       ],
