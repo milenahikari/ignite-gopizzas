@@ -10,10 +10,10 @@ import theme from "./src/theme";
 import { SignIn } from "@screens/SignIn";
 
 export default function App() {
-  const [fontsLoaded] = useFonts([
+  const [fontsLoaded] = useFonts({
     DMSans_400Regular,
     DMSerifDisplay_400Regular,
-  ]);
+  });
 
   if (!fontsLoaded) {
     return <AppLoading />;
