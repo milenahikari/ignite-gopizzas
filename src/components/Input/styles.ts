@@ -21,6 +21,10 @@ export const Container = styled(TextInput).attrs<Props>(({ theme, type }) => ({
   margin-bottom: 16px;
 
   ${({ theme, type }) => css`
-    //TODO: 05:56
+    font-family: ${theme.FONTS.TEXT};
+    border: 1px solid ${theme.COLORS.SHAPE};
+    color: ${type === "primary"
+      ? theme.COLORS.SECONDARY_900
+      : theme.COLORS.TITLE};
   `}
 `;
