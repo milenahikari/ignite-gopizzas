@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 import { Alert } from "react-native";
 import auth from "@react-native-firebase/auth";
 import firestore from "@react-native-firebase/firestore";
@@ -27,6 +33,24 @@ export const AuthContext = createContext({} as AutContextData);
 function AuthProvider({ children }: AuthProviderProps) {
   const [isLogging, setIsLogging] = useState(false);
   const [user, setUser] = useState<User | null>(null);
+
+  async function loadUserStorageData() {
+    setIsLogging(true);
+
+    const storedUser = await AsyncStorage.getItem(USER_COLLECTION);
+
+    if (storedUser) {
+      const userData = JSON.parse(storedUser) as User;
+      console.log(userData);
+      setUser(userData);
+    }
+
+    setIsLogging(false);
+  }
+
+  useEffect(() => {
+    loadUserStorageData();
+  }, []);
 
   async function signIn(email: string, password: string) {
     if (!email || !password) {
