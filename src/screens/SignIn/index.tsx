@@ -19,6 +19,7 @@ export function SignIn() {
   function handleSignIn() {
     signIn(email, password);
   }
+
   return (
     <S.Container>
       <KeyboardAvoidingView
